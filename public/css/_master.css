@@ -1,0 +1,332 @@
+/****************************/
+/** Imports **/
+/****************************/
+@import url("https://fonts.googleapis.com/css?family=IBM+Plex+Sans:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i|Rubik:300,300i,400,400i,500,500i,700,700i,900,900i&display=swap");
+
+
+/* Layouts */
+*{
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+header{
+    display: flex;
+    top: 0;
+    justify-content: space-between;
+    overflow: hidden;
+    background: #11101d;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    left: 260px;
+    top: 0;
+    width: calc(100% - 260px);
+}
+body{
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+}
+
+/* Footer */
+footer{
+    position: fixed;
+    background: #c9cacc;
+    color: #11101d;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    font-size: 15px;
+    font-weight: 500;
+    text-align: left;
+    left: 260px;
+    bottom: 0;
+    padding: 3px 10px;
+    height: 30px;
+    width: calc(100% - 260px);
+    transition: all 0.5s ease;
+}
+/* .main-footer.active{
+    width: calc(100% - 80px);
+    left: 80px;
+} */
+    
+.content-wrapper{
+    background: #f1f5f9;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.5s ease;
+}
+
+
+@media (min-width: 768px) {
+    .content-wrapper{
+      margin-left: 0; } }
+
+/* Header */
+.navbar{
+    display: flex;
+    margin: 0;
+    left: 260px;
+    top: 0;
+    height: 70px;
+    width: calc(100% - 260px);
+    background: #11101d;
+    padding: 6px 6px;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+.navbar .l-side{
+    margin: 0;
+}
+.navbar .l-side a{
+    position: relative;
+    height: 45px;
+    width: 45px;
+    margin: 0 0 5px;
+    align-items: center;
+    line-height: 30px;
+    display: inline-block;
+}
+.navbar .l-side i{
+    height: 45px;
+    width: 45px;
+    padding: 0 5px;
+    margin: 0;
+    text-align: center;
+    line-height: 28px;
+    color: #008a88;
+    font-size: 23px;
+}
+.navbar .r-side{
+    margin: 0;
+    padding: 0;
+    float: right;
+    align-items: flex-end;
+}
+.navbar .r-side i{
+    height: 45px;
+    width: 45px;
+    padding: 10px;
+    margin-left: 10px;
+    text-align: center;
+    line-height: 28px;
+    color: #008a88;
+    font-size: 23px;
+}
+.navbar .r-side .user-menu button{
+    float: right;
+    margin: 0;
+    padding: 0;
+    height: 70px;
+    width: 160px;
+    border: none;
+    border-radius: 1px;
+    background-color: #008a88;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    line-height: 4rem;
+    font-size: 15px;
+    overflow: hidden;
+    
+}
+.navbar .r-side .user-menu img{
+    padding-bottom: 5px;
+    justify-content: center;
+    height: 60px;
+}
+
+/* Sidebar */
+.sidebar{
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width:260px;
+    background: #fffacd;
+    transition: all 0.5s ease;
+    z-index: 100;
+  }
+.sidebar.close{
+  width: 78px;
+}
+.sidebar .logo_content .logo{
+    margin-top: 5px;
+    color: #fff;
+    display: flex;
+    height: 50px;
+    width: 100%;
+    align-items: center;
+    opacity: 1;
+    pointer-events: none;
+    transition: all 0.5s ease;
+}
+.sidebar .logo_content .logo{
+    font-size: 28px;
+    margin-right: 5px;
+}
+.sidebar.close .logo_content .logo .dsc_logo{
+    opacity: 1;
+    pointer-events: auto;
+}
+.sidebar.close .logo_content .logo .sasmec_logo{
+    opacity: 0;
+    pointer-events: none;
+}
+.sidebar .nav-links{
+  height: 100%;
+  padding: 30px 0 150px 0;
+  overflow: visible;
+}
+/* .sidebar .nav-links::-webkit-scrollbar{
+  display: none;
+} */
+.sidebar .nav-links li{
+  list-style: none;
+  position: relative;
+  transition: all 0.4s ease;
+}
+.sidebar .nav-links li:hover{
+  background: white;
+}
+
+.sidebar .nav-links li .icon-link{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sidebar.close .nav-links li .icon-link{
+  display: block;
+}
+
+.sidebar .nav-links li i{
+  height: 50px;
+  min-width: 78px;
+  text-align: center;
+  line-height: 50px;
+  font-size: 16px;
+  color: #11101d;
+  transition: all 0.3s ease;
+  cursor : pointer;
+}
+.sidebar .nav-links li.showMenu i.arrow{
+  transform : rotate(-180deg);
+}
+.sidebar.close .nav-links i.arrow{
+  display: none;
+}
+
+.sidebar .nav-links li a{
+  text-decoration: none;
+}
+
+.sidebar .nav-links li a .link_name{
+   font-size: 16px;
+   font-weight: 400;
+   color: #11101d;
+   overflow: visible;
+}
+
+.sidebar.close .nav-links li a .link_name{
+  opacity: 0;
+  pointer-events: none;
+}
+
+.sidebar .nav-links li .sub-menu{
+  padding: 6px 6px 14px 80px;
+  line-height: 25px;
+  margin-top: -10px;
+  background: #1d1b31;
+  display: none;
+}
+
+.sidebar.close .nav-links li .sub-menu{
+  display: none;
+}
+
+.sidebar .nav-links li.showMenu .sub-menu{
+  display: block;
+}
+
+.sidebar .nav-links li .sub-menu a{
+  color: white;
+  font-size: 15px;
+  padding: 7px 0;
+  white-space: nowrap;
+  opacity: 0.6;
+  transition: all 0.3s ease;
+}
+
+.sidebar .nav-links li .sub-menu a:hover{
+  opacity: 1;
+}
+
+.sidebar.close .nav-links li .sub-menu{
+  position: absolute;
+  left: 100%;
+  top: 0;
+  margin-top: 0;
+  padding: 10px 20px;
+  border-radius: 0 6px 6px 0;
+  transition: 0s;
+  opacity: 0;
+  display: block;
+  pointer-events: none;
+}
+.sidebar.close .nav-links li:hover .sub-menu{
+  top: 0;
+  opacity: 1;
+  pointer-events: auto;
+  transition: all 0.4s ease;
+}
+.sidebar .nav-links li .sub-menu .link_name{
+  display: none;
+}
+.sidebar.close .nav-links li .sub-menu .link_name{
+  color: white;
+  font-size: 18px;
+  opacity: 1;
+  display: block;
+}
+
+.sidebar .nav-links li .sub-menu.blank{
+  opacity: 1;
+  pointer-events: auto;
+  padding: 3px 20px 6px 16px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.sidebar .nav-links li:hover .sub-menu.blank{
+  top: 0;
+  transform: translateY(-50%);
+}
+
+.sidebar.close ~ .navbar, .sidebar.close ~ footer{
+    width: calc(100% - 80px);
+    left: 80px;
+}
+
+/* Content */
+.content{
+    position: absolute;
+    height: calc(100% - 70px);
+    width: calc(100% - 260px);
+    margin: 70px 0;
+    padding: 30px 10px 30px 30px;
+    left:260px;
+    transition: all 0.5s ease;
+}
+
+.sidebar.close ~ .content{
+    padding: 30px 5px 30px 30px;
+    width: calc(100% - 78px);
+    left: 78px;
+}
+
+
+.other-text{
+  display: none;
+}
