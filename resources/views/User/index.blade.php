@@ -10,7 +10,7 @@
     <p class="text-xl font-bold p-2">Menu</p>
     <div class="row">
         <div class="col-sm-4 py-2">
-            <div class="card h-100 text-white bg-dark">
+            <div class="card h-100 text-white bg-dark" >
                 <div class="card-body">
                     <h3 class="card-title">My Task</h3>
                     <p class="card-text">View my task</p>
@@ -33,7 +33,7 @@
     <p class="text-xl font-bold p-2">List of All Reports</p>
     <div class="row">
         <div class="col-sm-4 py-2">
-            <div class="card h-100 text-white bg-primary">
+            <div class="card h-100 text-white" style="background-color:#0d8368">
                 <div class="card-body">
                     <h3 class="card-title">Document Review Form</h3>
                     <p class="card-text">IIUM-IIUMMC-SHAR-F001</p>
@@ -44,7 +44,7 @@
         </div>
 
         <div class="col-sm-4 py-2">
-            <div class="card h-100 text-white bg-secondary">
+            <div class="card h-100 text-white " style="background-color:#0d8368">
                 <div class="card-body">
                     <h3 class="card-title">Food Premise Inspection Form</h3>
                     <p class="card-text">IIUM-IIUMMC-SHAR-F002</p>
@@ -55,7 +55,7 @@
         </div>
 
         <div class="col-sm-4 py-2">
-            <div class="card h-100 text-white bg-success">
+            <div class="card h-100 text-white " style="background-color:#0d8368">
                 <div class="card-body">
                     <h3 class="card-title">Referral Form</h3>
                     <p class="card-text">IIUM-IIUMMC-SHAR-F004</p>
@@ -66,7 +66,7 @@
         </div>
 
         <div class="col-sm-4 py-2">
-            <div class="card h-100 text-white bg-danger">
+            <div class="card h-100 text-white " style="background-color:#0d8368">
                 <div class="card-body">
                     <h3 class="card-title">Program Monitoring Form</h3>
                     <p class="card-text">IIUM-IIUMMC-SHAR-F006</p>
@@ -77,7 +77,7 @@
         </div>
 
         <div class="col-sm-4 py-2">
-            <div class="card h-100 text-white bg-warning">
+            <div class="card h-100 text-white " style="background-color:#0d8368">
                 <div class="card-body">
                     <h3 class="card-title">Activity Monitoring Form</h3>
                     <p class="card-text">IIUM-IIUMMC-SHAR-F007</p>
@@ -88,7 +88,7 @@
         </div>
 
         <div class="col-sm-4 py-2">
-            <div class="card h-100 text-white bg-info">
+            <div class="card h-100 text-white " style="background-color:#0d8368">
                 <div class="card-body">
                     <h3 class="card-title">Complaint Form</h3>
                     <p class="card-text">IIUM-IIUMMC-SHAR-F008</p>
@@ -99,7 +99,7 @@
         </div>
 
         <div class="col-sm-4 py-2">
-            <div class="card h-100 text-white bg-primary">
+            <div class="card h-100 text-white  " style="background-color:#0d8368">
                 <div class="card-body">
                     <h3 class="card-title">Terms and Condition Form</h3>
                     <p class="card-text">IIUM-IIUMMC-SHAR-F009</p>
@@ -110,7 +110,7 @@
         </div>
 
         <div class="col-sm-4 py-2">
-            <div class="card h-100 text-white bg-secondary">
+            <div class="card h-100 text-white " style="background-color:#0d8368">
                 <div class="card-body">
                     <h3 class="card-title">SLO Report</h3>
                     <p class="card-text">IIUM-IIUMMC-SHAR-F010</p>
@@ -121,7 +121,7 @@
         </div>
 
         <div class="col-sm-4 py-2">
-            <div class="card h-100 text-white bg-success">
+            <div class="card h-100 text-white  " style="background-color:#0d8368">
                 <div class="card-body">
                     <h3 class="card-title">Shariah Clinic Form</h3>
                     <p class="card-text">IIUM-IIUMMC-SHAR-F011</p>
@@ -132,7 +132,7 @@
         </div>
 
         <div class="col-sm-4 py-2">
-            <div class="card h-100 text-white bg-danger">
+            <div class="card h-100 text-white " style="background-color:#0d8368">
                 <div class="card-body">
                     <h3 class="card-title">Speaker Consent Form</h3>
                     <p class="card-text">IIUM-IIUMMC-SHAR-F012</p>
