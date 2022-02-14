@@ -38,6 +38,17 @@ Route::get('/', function () {
 //auth route for all
 Route::group(['middleware' => ['auth']], function(){
     Route::get('/dashboard', 'App\Http\Controllers\DashboardController@index')->name('dashboard');
+
+    //Manage My Report
+    Route::get('/my-report-history', 'App\Http\Controllers\Form\ManageReportController@viewReportHistory')->name('report.history');
+    
+    //Complaint
+    Route::get('/complaint/create', 'App\Http\Controllers\Form\ComplaintFormController@create')->name('complaint.create');
+    Route::post('/complaint/store', 'App\Http\Controllers\Form\ComplaintFormController@storeReport')->name('complaint.store');
+    Route::get('/complaint/details/{id}', 'App\Http\Controllers\Form\ComplaintFormController@viewComplaintDetails');
+    Route::get('/complaint/show', 'App\Http\Controllers\Form\ComplaintFormController@show')->name('complaint.show');
+    Route::get('/complaint/pdf/{id}','App\Http\Controllers\Form\ComplaintFormController@pdf')->name('complaint.pdf');
+    Route::get('/complaint/view/{id}','App\Http\Controllers\Form\ComplaintFormController@view')->name('complaint.view');
 });
 
 
@@ -60,9 +71,9 @@ Route::group(['middleware' => ['auth', 'role:admin']], function() {
 // routes for dsc and ndsc
 Route::group(['middleware' => ['auth', 'role:dsc']], function() {
 
-    //Manage My Report
-    Route::get('/my-report-history', 'App\Http\Controllers\Form\ManageReportController@viewReportHistory')->name('report.history');
-    //Route::get('/my-report-history', 'App\Http\Controllers\Form\ManageReportController@show')->name('report.history');
+    // //Manage My Report
+    // Route::get('/my-report-history', 'App\Http\Controllers\Form\ManageReportController@viewReportHistory')->name('report.history');
+    // //Route::get('/my-report-history', 'App\Http\Controllers\Form\ManageReportController@show')->name('report.history');
     
 
     //My Task
@@ -115,17 +126,17 @@ Route::group(['middleware' => ['auth', 'role:dsc']], function() {
     Route::get('/referral/pdf/{id}','App\Http\Controllers\Form\ReferralFormController@pdf')->name('referral.pdf');
 
     //Complaint
-    Route::get('/complaint/create', 'App\Http\Controllers\Form\ComplaintFormController@create')->name('complaint.create');
-    Route::post('/complaint/store', 'App\Http\Controllers\Form\ComplaintFormController@storeReport')->name('complaint.store');
+    // Route::get('/complaint/create', 'App\Http\Controllers\Form\ComplaintFormController@create')->name('complaint.create');
+    // Route::post('/complaint/store', 'App\Http\Controllers\Form\ComplaintFormController@storeReport')->name('complaint.store');
     Route::get('/manage-complaint/view/all', 'App\Http\Controllers\Form\ComplaintFormController@viewAll')->name('complaint.view-all');
-    Route::get('/complaint/details/{id}', 'App\Http\Controllers\Form\ComplaintFormController@viewComplaintDetails');
+    // Route::get('/complaint/details/{id}', 'App\Http\Controllers\Form\ComplaintFormController@viewComplaintDetails');
     Route::get('/complaint/assign-staff/{id}', 'App\Http\Controllers\Form\ComplaintFormController@assignStaff')->name('complaint.assign');
     Route::post('/complaint/assign-staff/store/{id}', 'App\Http\Controllers\Form\ComplaintFormController@storeAssignStaff')->name('complaint.store.assign');
     Route::get('/complaint/investigate/{id}', 'App\Http\Controllers\Form\ComplaintFormController@investigateComplaint');
     Route::post('/complaint/investigate/store/{id}', 'App\Http\Controllers\Form\ComplaintFormController@storeInvestigation');
-    Route::get('/complaint/show', 'App\Http\Controllers\Form\ComplaintFormController@show')->name('complaint.show');
-    Route::get('/complaint/pdf/{id}','App\Http\Controllers\Form\ComplaintFormController@pdf')->name('complaint.pdf');
-    Route::get('/complaint/view/{id}','App\Http\Controllers\Form\ComplaintFormController@view')->name('complaint.view');
+    // Route::get('/complaint/show', 'App\Http\Controllers\Form\ComplaintFormController@show')->name('complaint.show');
+    // Route::get('/complaint/pdf/{id}','App\Http\Controllers\Form\ComplaintFormController@pdf')->name('complaint.pdf');
+    // Route::get('/complaint/view/{id}','App\Http\Controllers\Form\ComplaintFormController@view')->name('complaint.view');
 
     //T&C
     Route::get('/terms/create', 'App\Http\Controllers\Form\TermsController@create')->name('terms.create');
@@ -186,7 +197,7 @@ Route::group(['middleware' => ['auth', 'role:dsc']], function() {
 
 // routes for ndsc
 Route::group(['middleware' => ['auth', 'role:ndsc']], function() {
-    
+
 });
 
 require __DIR__.'/auth.php';

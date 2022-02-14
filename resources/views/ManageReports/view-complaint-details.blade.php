@@ -107,7 +107,9 @@
                     <div class="pt-4 mb-2 md:mb-1 md:flex items-center">
 					<label class="pr-2 text-gray-800 block font-bold text-lg uppercase tracking-wide">Investigation Details</label>
 					<span class="mr-4 inline-block hidden md:block">:</span>
-					<div class="flex-1 text-lg">{{ $complaint->investigation }}</div>
+					<div class="flex-1 text-lg">
+					{{ $complaint->investigation }}
+					</div>
 				    </div>
                 </div>
                
@@ -129,8 +131,12 @@
                             <div class="mb-2 md:mb-1 md:flex items-center">
                                 <label class="pr-2 text-gray-800 block font-bold text-lg uppercase tracking-wide">Immediate Action </label>
                                 <span class="mr-4 inline-block hidden md:block">:</span>
-                                <div class="flex-1 text-lg">{{ $complaint->immediate_action }}<br>
-                                <br>{{ $complaint->immediate_completion }}</div>
+                                <div class="flex-1 text-lg">
+                                {{ $complaint->immediate_action }}
+                                <br>
+                                <br>
+                                {{ $complaint->immediate_completion }}
+                                </div>
                             </div>
                             </td>
                             <td>
@@ -138,10 +144,10 @@
                                     <label class="pr-2 text-gray-800 block font-bold text-lg uppercase tracking-wide">Long-term Action</label>
                                     <span class="mr-4 inline-block hidden md:block">:</span>
                                     <div class="flex-1 text-lg">
-                                    {{ $complaint->investigation }}
+                                    {{ $complaint->longterm_action }}
                                     <br>
                                     <br>
-
+                                    {{ $complaint->longterm_completion }}
                                     </div>
                                 </div>
                             </td>

@@ -33,10 +33,16 @@ class ManageReportController extends Controller
 
         // return view('user.report_history', compact('complaints', 'referrals', 'slo'),['programs'=>$programs]);
 
-        $complaints = DB::table('complaint_forms')->where('scu_id', '=', Auth::user()->id)
+        // $complaints = DB::table('complaint_forms')->where('scu_id', '=', Auth::user()->id)
+        //                                         ->orderBy('status', 'DESC')
+        //                                         ->get();
+
+        $complaints = DB::table('complaint_forms')->where('complainant_id', '=', Auth::user()->id)
                                                 ->orderBy('status', 'DESC')
                                                 ->get();
         
+        // $complaints = DB::select('select * from complaint_forms');
+
         $terms = DB::select('select * from terms');
 
         $speakers = DB::select('select * from speakers');

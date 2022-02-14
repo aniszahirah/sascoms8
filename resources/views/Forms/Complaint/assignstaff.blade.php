@@ -81,10 +81,10 @@
                                             <option disabled="" selected="">Assign to</option>
                                             @foreach($staffs as $staff)
                                             <option value= "{{ $staff->id }}">
-                                                    <span>{{ $staff->id }}</span>
+                                                    {{-- <span>{{ $staff->id }}</span> --}}
                                                     <div class="block">
                                                         <strong class="block">{{ $staff->name }}</strong>
-                                                        <span class="block">{{ $staff->email }}</span>
+                                                        {{-- <span class="block">{{ $staff->email }}</span> --}}
                                                     </div>
                                             </option> 
                                             @endforeach
@@ -113,7 +113,6 @@
                     </div>
                 </div>
             </div>
-            
             <div class="flex justify-between mt-3">
                 <div class="flex flex-col ">
                     <div class="text-gray-800 block font-bold text-lg uppercase underline underline-offset-4 tracking-wide">A. Investigation and Root Cause</div>
@@ -148,7 +147,7 @@
                                 {{ $complaint->immediate_action }}
                                 <br>
                                 <br>
-                                {{ $complaint->immediate_completion }}
+                                {{-- {{ $complaint->immediate_completion }} --}}
                                 </div>
                             </div>
                             </td>
@@ -157,9 +156,11 @@
                                     <label class="pr-2 text-gray-800 block font-bold text-lg uppercase tracking-wide">Long-term Action</label>
                                     <span class="mr-4 inline-block hidden md:block">:</span>
                                     <div class="flex-1 text-lg">
-                                    {{ $complaint->investigation }}
+                                    {{ $complaint->longterm_action }}
                                     <br>
                                     <br>
+                                    {{-- {{ $complaint->longterm_completion }} --}}
+                                    </div>
 
                                     </div>
                                 </div>

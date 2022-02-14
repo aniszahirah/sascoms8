@@ -5,135 +5,142 @@
     <title></title>
   </head>
   <body>
-    
-    <div style="float: left" class="top right">
-      <p>Date: {{ strftime("%d %b %Y",strtotime($complaint->created_at)) }} <br>Time: {{ strftime("%T",strtotime($complaint->created_at)) }}</p></div>
 
-    <div style="float: right">
-      <p>IIUM-IIUMMC-SHAR-F011<br>VER: 01<br>REV: 01<br>EFFECTIVE DATE: {{ strftime("%d %b %Y",strtotime($complaint->created_at)) }}</p>
+    <div id="header">
+      <div style="float: right; text-align: right">
+        <p>IIUM-IIUMMC-SHAR-F008<br>VER: 01<br>REV: 02<br>EFFECTIVE DATE: 01 FEBRUARY 2021</p>
+      </div>
+
+      <div style="position: relative; text-align: center;">
+        <img src="images/iium-logo.jpg" alt="logo" width="200" >
+        <h4>SULTAN AHMAD SHAH MEDICAL CENTRE @IIUM<br>SHARIAH COMPLIANCE UNIT<br>COMPLAINT FORM</h4>
+      </div>
+      
     </div>
-
-    <div style="position: relative; text-align: center">
-      <img src="images/iium-logo.jpg" alt="logo" width="200" ></div>
+    
+    <div id="footer">
       <div style="position: relative; text-align: center">
-      <h4>SULTAN AHMAD SHAH MEDICAL CENTRE @IIUM<br>DEPARTMENT OF SHARIAH COMPLIANCE<br>COMPLAINT FORM</h4></div>
-
-      <div class="col-span-6 sm:col-span-10">
-        <div class="col-sm-9">
-          <label for="name" class="font-semibold leading-none">Complainant Name: </label>
-          <input type="text" id="name" name="name" value="{{ $complaint->complainant_name }}" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" style="width:400px">
-        </div>
+        <p>Sultan Ahmad Shah Medical Centre @IIUM, Jalan Sultan Ahmad Shah, Bandar Indera Mahkota, 25200 Kuantan, Pahang Darul Makmur.<br>Tel: 09-591 2500</p>
       </div>
-
-      <div class="col-span-6 sm:col-span-10">
-        <div class="col-sm-9">
-          <label for="name" class="font-semibold leading-none">Date: </label>
-          <input type="text" id="name" name="name" value="{{ $complaint->complaint_date }}" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" style="width:400px">
-        </div>
-      </div>
-
-      <div class="col-span-6 sm:col-span-10">
-        <div class="col-sm-9">
-          <label for="date" class="font-semibold leading-none">Phone No: </label>
-          <input type="text" id="date" value="{{ $complaint->phone_no }}" name="date" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" style="width:250px">
-        </div>
-      </div><br>
-
-      <div class="col-span-6 sm:col-span-10">
-        <div class="col-sm-9">
-          <label for="date" class="font-semibold leading-none">Department: </label>
-          <input type="text" id="date" value="{{ $complaint->department }}" name="date" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" style="width:250px">
-        </div>
-      </div><br>
-
-      <div class="col-span-6 sm:col-span-10">
-        <div class="col-sm-9">
-          <label for="date" class="font-semibold leading-none">Complaint Type: </label>
-          <input type="text" id="date" value="{{ $complaint->complaint_type }}" name="date" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" style="width:250px">
-        </div>
-      </div><br>
-
-      <div class="col-span-6 sm:col-span-10">
-        <div class="col-sm-9">
-          <label for="date" class="font-semibold leading-none">Details: </label>
-          <input type="text" id="date" value="{{ $complaint->details }}" name="date" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" style="width:250px">
-        </div>
-      </div><br>
-
-      <div class="col-span-6 sm:col-span-10">
-        <div class="col-sm-9">
-          <label for="date" class="font-semibold leading-none">Received By: </label>
-          <input type="text" id="date" value="{{ $complaint->received_by }}" name="date" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" style="width:250px">
-        </div>
-      </div><br>
-
-      <div class="col-span-6 sm:col-span-10">
-        <div class="col-sm-9">
-          <label for="date" class="font-semibold leading-none">Received Date: </label>
-          <input type="text" id="date" value="{{ $complaint->received_date }}" name="date" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" style="width:250px">
-        </div>
-      </div><br>
-
-      <div class="col-span-6 sm:col-span-10">
-        <div class="col-sm-9">
-          <label for="date" class="font-semibold leading-none">Investigation: </label>
-          <input type="text" id="date" value="{{ $complaint->investigation }}" name="date" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" style="width:250px">
-        </div>
-      </div><br>
-
-      <div class="col-span-6 sm:col-span-10">
-        <div class="col-sm-9">
-          <label for="date" class="font-semibold leading-none">Immediate Action: </label>
-          <input type="text" id="date" value="{{ $complaint->immediate_action }}" name="date" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" style="width:250px">
-        </div>
-      </div><br>
-
-      {{-- <div class="col-span-6 sm:col-span-10">
-        <div class="col-sm-9">
-          <label for="date" class="font-semibold leading-none">Immediate Completion </label>
-          <input type="text" id="date" value="{{ $complaint->immediate_completion }}" name="date" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" style="width:250px">
-        </div>
-      </div><br> --}}
-
-      {{-- <div class="col-span-6 sm:col-span-10">
-        <div class="col-sm-9">
-          <label for="date" class="font-semibold leading-none">Long-Term Action </label>
-          <input type="text" id="date" value="{{ $complaint->long-term_action }}" name="date" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" style="width:250px">
-        </div>
-      </div><br>
-
-      <div class="col-span-6 sm:col-span-10">
-        <div class="col-sm-9">
-          <label for="date" class="font-semibold leading-none">Long-Term Completion </label>
-          <input type="text" id="date" value="{{ $complaint->long-term_completion }}" name="date" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" style="width:250px">
-        </div>
-      </div><br> --}}
-
-      {{-- <div class="col-span-6 sm:col-span-10">
-        <div class="col-sm-9">
-          <label for="date" class="font-semibold leading-none">Verified By </label>
-          <input type="text" id="date" value="{{ $complaint->verified_by }}" name="date" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" style="width:250px">
-        </div>
-      </div><br> --}}
-
-      {{-- <div class="col-span-6 sm:col-span-10">
-        <div class="col-sm-9">
-          <label for="date" class="font-semibold leading-none">Status </label>
-          <input type="text" id="date" value="{{ $complaint->status }}" name="date" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" style="width:250px">
-        </div>
-      </div><br> --}}
-
-      
-
-    <div style="position: relative; text-align: center">
-      <p style="position: fixed; bottom: 0; width:100%;">Sultan Ahmad Shah Medical Centre @IIUM, Jalan Sultan Ahmad Shah, Bandar Indera Mahkota, 25200 Kuantan, Pahang Darul Makmur.<br>Tel: 09-591 2500</p>
-      
     </div>
-    
+
+
+    <div>
+            <div>
+                <div>
+               <div>
+                <table class="pt-info">
+                        <tr>
+                            <th style="text-align: left; padding: 5px;">NAME</th>
+                            <td style="text-align: left; padding: 5px;">{{ $complaint->complainant_name }}</td>
+                            <th style="text-align: left; padding: 5px;">DATE</th>
+                            <td style="text-align: left; padding: 5px;">{{ $complaint->complaint_date }}</td>
+                        </tr>
+                        <tr>
+                            <th style="text-align: left; padding: 5px;">PHONE NUMBER</th>
+                            <td style="text-align: left; padding: 5px;">{{ $complaint->phone_no }}</td>
+                            <th style="text-align: left; padding: 5px;">CLINIC/WARD/DEPARTMENT</th>
+                            <td style="text-align: left; padding: 5px;">{{ $complaint->department }}</td>
+                        </tr>
+                    </table>
+               </div>
+               
+
+            <div>
+                <div>
+                <div>
+					<div>
+                        <h4>TYPE OF COMPLAINT :</h4>
+                        <br>
+                        {{ $complaint->complaint_type }}
+					</div>
+				</div>
+                <br><br><br>
+				<div>
+					<h4>Details :</h4>
+                    <br>
+                    <div>
+                        {{ $complaint->details }}
+                    </div>
+				    </div>
+                <br><br><br><br><br>
+				        <div style="position: absolute; left: 10px;">
+                    <h5>This is an auto-generated signature</h5>
+                    <div>Name : {{ $complaint->complainant }}</div>
+                    <div>Date : {{ $complaint->complaint_date }}</div>
+                </div>
+
+                </div>
+            </div>
+
+            <div class="page_break">
+                <h4 style="text-decoration: underline">FOR OFFICE USE ONLY</h4>
+                <p style="font-size: 14px">Received By  : {{ $complaint->received_by }}</p>
+                <p style="font-size: 14px">Date Received : {{ $complaint->received_date }}</p>
+                <br>
+                <table class="pt-info">
+                  <tr>
+                    <th colspan="2">A. INVESTIGATION & ROOT CAUSE</th>
+                  </tr>
+                  <tr>
+                    <td colspan="2">{{ $complaint->investigation }}</td>
+                  </tr>
+                  <tr>
+                    <th colspan="2">B. CORRECTIVE ACTION TAKEN</th>
+                  </tr>
+                  <tr>
+                    <th>Immediate Action & Completion Date</th>
+                    <th>Long-Term Action & Completion Date</th>
+                  </tr>
+                  <tr>
+                    <td>
+                      {{ $complaint->immediate_action }}
+                      <br><br>
+                      {{ $complaint->immediate_completion }}
+                    </td>
+                    <td>
+                      {{ $complaint->longterm_action }}
+                      <br><br>
+                      {{ $complaint->longterm_completion }}
+                    </td>
+                  </tr>
+
+                </table>
+                <div>
+                  <h5>Verified by :</h5>
+                  <h6>This is an auto-generated signature</h6>
+                  <div>
+                    {{ $complaint->verified_by }}
+                  </div>
+                </div>
+            </div>      
+    </div>
+
   </body>
 </html>
 
 <style>
+  *{
+  font-family: Arial, sans-serif;
+  }
+  @page { 
+    margin: 180px 50px; }
+  #header { 
+    position: fixed; 
+    left: 0px; 
+    top: -180px; 
+    right: 0px; 
+    height: 150px; 
+    text-align: center; }
+  #footer { 
+    position: fixed; 
+    left: 0px; 
+    bottom: -250px; 
+    right: 0px; 
+    height: 150px;
+    text-align: center; }
+  .page_break {
+      page-break-before: always; }
   .centre{
     display: block;
     margin-left: auto;
@@ -146,4 +153,17 @@
   .top right{
     font-size: 10px;
   }
+  table, tr, td {
+    padding: 2px;
+    border: 1px solid black;
+    border-collapse: collapse;
+  }   
+  .pt-info{
+      margin: 2px;
+      padding:2px;
+      width: 100%;
+      font-size: 16px;
+  }
+
 </style>
+

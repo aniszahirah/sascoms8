@@ -73,6 +73,16 @@ class ComplaintFormController extends Controller
         //                     ->where('id', '=', $request->review_staff)
         //                     ->get();
 
+        // ComplaintForm::findOrFail($id)->update([
+        //     'scu_id' => $request->review_staff,
+        //     'received_by' => DB::table('users')
+        //                         ->select('name')
+        //                         ->where('id', '=', $request->review_staff)
+        //                         ->get(),
+        //     'received_date' => Carbon::now(),
+        //     'status' => "In review",
+        // ]);
+
         ComplaintForm::findOrFail($id)->update([
             'scu_id' => $request->review_staff,
             'received_by' => DB::table('users')
